@@ -1,0 +1,46 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.tsx --bundle --minify --outfile=./public/app.js",
+    "start": "node scripts/start.js",
+    "test": "jest",
+    "test:cov": "jest --coverage --collectCoverageFrom=src/**/*.{ts,tsx} && jest-coverage-badges output ./artifacts/badges",
+    "test:cov-browser": "jest --coverage --collectCoverageFrom=src/**/*.{ts,tsx} && jest-coverage-badges output ./artifacts/badges && ./coverage/lcov-report/index.html",
+    "eslint": "eslint src/**/*.ts{,x}",
+    "tslint": "tsc --noemit",
+    "lint": "yarn eslint --fix && yarn tslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "esbuild-jest": "^0.5.0",
+    "esbuild-serve": "^1.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-css-import-order": "^1.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-sort-exports": "^0.6.0",
+    "jest": "^27.3.1",
+    "jest-badges": "^0.1.3",
+    "jest-coverage-badges": "^1.1.2"
+  },
+  "dependencies": {
+    "decimal.js": "^10.3.1",
+    "esbuild": "^0.13.13",
+    "jest-mock-extended": "^2.0.4",
+    "typescript": "^4.4.4"
+  }
+}
